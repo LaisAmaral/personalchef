@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from "./shared/login/login.component";
-import {Routes} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -20,7 +20,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
